@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Twitter Media Extractor</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      type="text/css"
+      rel="stylesheet"
+      href="{{ url_for('static', filename='css/style.css') }}"
+    />
+    <style>
+      h1 {
+        color: #fff;
+        font-size: 2em;
+        text-transform: uppercase;
+        text-align: center;
+      }
+
+      div {
+        max-width: 1000px;
+        display: grid;
+        grid-gap: 1em;
+        margin: 3em auto;
+        grid-template-columns: 1fr 1fr 1fr;
+      }
+
+      div img {
+        width: 100%;
+        transition: all 0.15s ease-in;
+      }
+
+      div img:hover {
+        transform: scale(1.06);
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Media Extractor</h1>
+    <div>
+      {% for image in images %}
+      <img src="{{image}}" />
+      {% endfor %}
+    </div>
+  </body>
+</html>

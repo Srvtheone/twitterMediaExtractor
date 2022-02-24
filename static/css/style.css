@@ -1,0 +1,8 @@
+body,
+html {
+  font-family: sans-serif;
+  width: 100%;
+  overflow-x: hidden;
+  font-size: 16px;
+  background-color: #151515;
+}
